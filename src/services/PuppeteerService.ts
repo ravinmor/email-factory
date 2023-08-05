@@ -38,13 +38,13 @@ export class PuppeteerService {
     await page.setRequestInterception(true);
 
     // > Skip images/styles/fonts loading for better performance
-    page.on('request', (req) => {
-      if(req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() == 'image'){
-        req.abort();
-      } else {
-        req.continue();
-      }
-    });
+    // page.on('request', (req) => {
+    //   if(req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() == 'image'){
+    //     req.abort();
+    //   } else {
+    //     req.continue();
+    //   }
+    // });
 
     // > Pass "WebDriver check"
     await page.evaluateOnNewDocument(() => {

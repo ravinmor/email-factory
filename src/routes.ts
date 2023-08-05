@@ -4,10 +4,6 @@ import { GuerrillamailController } from "./controllers/GuerrillamailController";
 
 const routes = Router();
 
-routes.get("/createProtonEmail", new EmailController().createProtonEmail);
-routes.get("/createGmailEmails", new EmailController().createGmailEmails);
-
-routes.get("/getEmailAddress", new GuerrillamailController().getEmailAddress);
-routes.get("/getVerificationCode", new GuerrillamailController().getVerificationCode);
+routes.get("/createTutaNotaEmail", new EmailController().createTutaNotaEmail);
 
 export { routes };
